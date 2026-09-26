@@ -35,7 +35,22 @@
 <section id="products" class="hidden"><div class="panel"><div class="panelhead"><div class="paneltitle">المنتجات</div><div style="display:flex;gap:7px"><input class="input" id="productSearch" placeholder="بحث عن منتج…"><button class="btn primary" id="addProduct">+ منتج</button></div></div><div class="grid" id="productGrid"></div></div></section>
 <section id="slider" class="hidden"><div class="panel"><div class="panelhead"><div class="paneltitle">سلايدر الصفحة الرئيسية</div><button class="btn primary" id="addSlide">+ شريحة</button></div><div class="grid" id="slideGrid"></div></div></section><section id="feedback" class="hidden"><div class="panel"><div class="panelhead"><div class="paneltitle">آراء الزبائن</div><button class="btn primary" id="addFeedback">+ رأي</button></div><div class="hint" style="margin:8px 0 14px">تقدر تعدّل الصورة، ترتيبها، ظهورها، وتحذف أي Feedback. التعديل هنا ينعكس على موقع الزبائن.</div><div class="grid" id="feedbackGrid"></div></div></section><section id="content" class="hidden"><div class="panel"><div class="panelhead"><div><div class="paneltitle">محرر محتوى الموقع</div><div class="hint">كل النصوص الظاهرة في الصفحة الرئيسية، المميزات، الفوتر والسياسات محفوظة هنا. التعديل لا يلمس المنتجات أو الصور.</div></div><button class="btn primary" id="saveContent">حفظ كل المحتوى</button></div><div id="contentEditor"></div></div></section>
 <section id="settings" class="hidden"><div class="panel"><div class="paneltitle">معلومات المتجر</div><div class="two"><div class="field"><label>اسم المتجر</label><input id="set_store_name"></div><div class="field"><label>رقم واتساب</label><input id="set_whatsapp" placeholder="9705xxxxxxxx"></div><div class="field"><label>رسالة الترحيب</label><input id="set_welcome"></div><div class="field"><label>مدة التوصيل</label><input id="set_delivery_time"></div><div class="field"><label>سياسة الاستبدال</label><textarea id="set_exchange_policy"></textarea></div><div class="field"><label>حقوق الموقع</label><input id="set_site_credit" value="Designed & Created by Yousef Ajra"></div></div><button class="btn primary" id="saveSettings">حفظ الإعدادات</button></div>
-<div class="panel"><div class="paneltitle">روابط التواصل والأرقام الظاهرة</div><div class="two"><div class="field"><label>Facebook</label><input id="set_facebook"></div><div class="field"><label>Instagram</label><input id="set_instagram"></div><div class="field"><label>TikTok</label><input id="set_tiktok"></div><div class="field"><label>Snapchat</label><input id="set_snapchat"></div><div class="field"><label>Facebook followers</label><input id="set_facebook_followers" type="number"></div><div class="field"><label>Instagram followers</label><input id="set_instagram_followers" type="number"></div><div class="field"><label>TikTok followers</label><input id="set_tiktok_followers" type="number"></div><div class="field"><label>Snapchat followers</label><input id="set_snapchat_followers" type="number"></div></div><button class="btn primary" id="saveSocial">حفظ</button></div></section>
+<div class="panel"><div class="paneltitle">روابط التواصل والأرقام الظاهرة</div><div class="two"><div class="field"><label>Facebook</label><input id="set_facebook"></div><div class="field"><label>Instagram</label><input id="set_instagram"></div><div class="field"><label>TikTok</label><input id="set_tiktok"></div><div class="field"><label>Snapchat</label><input id="set_snapchat"></div><div class="field"><label>Facebook followers</label><input id="set_facebook_followers" type="number"></div><div class="field"><label>Instagram followers</label><input id="set_instagram_followers" type="number"></div><div class="field"><label>TikTok followers</label><input id="set_tiktok_followers" type="number"></div><div class="field"><label>Snapchat followers</label><input id="set_snapchat_followers" type="number"></div></div><button class="btn primary" id="saveSocial">حفظ</button></div><div class="panel">
+<div class="panelhead">
+<div><div class="paneltitle">مظهر الموقع</div><div class="hint">تغيّري الألوان وبعض تفاصيل البطاقات من هنا، وتنعكس على موقع الزبائن بدون تعديل الكود.</div></div>
+</div>
+<div class="two">
+<div class="field"><label>اللون الرئيسي — Wine</label><input id="set_theme_wine" type="text" placeholder="#641f34"></div>
+<div class="field"><label>اللون الذهبي — Gold</label><input id="set_theme_gold" type="text" placeholder="#b9985a"></div>
+<div class="field"><label>لون الخلفية — Cream</label><input id="set_theme_cream" type="text" placeholder="#faf7f2"></div>
+<div class="field"><label>اللون الداكن</label><input id="set_theme_dark" type="text" placeholder="#431321"></div>
+<div class="field"><label>عدد أعمدة المنتجات على الكمبيوتر</label><select id="set_theme_columns"><option value="3">3</option><option value="4" selected>4</option><option value="5">5</option></select></div>
+<div class="field"><label>استدارة بطاقات المنتجات</label><input id="set_theme_radius" type="number" min="8" max="32" value="18"></div>
+</div>
+<button class="btn primary" id="saveTheme">حفظ المظهر</button>
+</div>
+
+</section>
 <section id="delivery" class="hidden"><div class="panel"><div class="panelhead"><div class="paneltitle">مناطق التوصيل</div><button class="btn primary" id="addArea">+ منطقة</button></div><div class="tablewrap"><table><thead><tr><th>المنطقة</th><th>السعر</th><th>الحالة</th><th></th></tr></thead><tbody id="areaBody"></tbody></table></div></div></section>
 <section id="orders" class="hidden"><div class="panel"><div class="panelhead"><div class="paneltitle">الطلبات</div><input class="input" id="orderSearch" placeholder="بحث بالاسم أو الهاتف…"></div><div class="tablewrap"><table><thead><tr><th>الاسم</th><th>الهاتف</th><th>المنطقة</th><th>الإجمالي</th><th>الحالة</th><th></th></tr></thead><tbody id="orderBody"></tbody></table></div></div></section>
 </div></main></div><div id="modalRoot"></div><div class="toast" id="toast"></div>
@@ -94,10 +109,25 @@ function renderContentEditor(){const root=$("contentEditor");if(!root)return;con
 function collectContent(lang,base){const out=JSON.parse(JSON.stringify(base||{}));for(const k of Object.keys(out)){if(k==="dir"||k==="langBtn"||k==="cats"||k==="policyItems")continue;const el=$(`ct_${lang}_${k}`);if(el)out[k]=el.value}out.cats={...(out.cats||{})};for(const k of ["all","dresses","sets","offers"]){const el=$(`ct_${lang}_cats_${k}`);if(el)out.cats[k]=el.value}out.policyItems=(out.policyItems||[]).map((row,i)=>[0,1,2].map(j=>$(`ct_${lang}_pi_${i}_${j}`)?.value??row[j]??""));return out}
 $("saveContent").onclick=async()=>{const btn=$("saveContent");btn.disabled=true;try{const arNew=collectContent("ar",contentAr),enNew=collectContent("en",contentEn);const rows=[{key:"site_content_ar",value:arNew,updated_at:new Date().toISOString()},{key:"site_content_en",value:enNew,updated_at:new Date().toISOString()}];const {error}=await sb.from("store_settings").upsert(rows,{onConflict:"key"});if(error)throw error;contentAr=arNew;contentEn=enNew;settings.site_content_ar=arNew;settings.site_content_en=enNew;toast("تم حفظ كل محتوى الموقع")}catch(e){alert(e.message||"تعذر حفظ المحتوى")}finally{btn.disabled=false}};
 
-function val(k){return settings[k]??""}function renderSettings(){for(const k of ["store_name","whatsapp","welcome","delivery_time","exchange_policy","site_credit","facebook","instagram","tiktok","snapchat","facebook_followers","instagram_followers","tiktok_followers","snapchat_followers"])if($("set_"+k))$("set_"+k).value=val(k)}
+function val(k){return settings[k]??""}
+function renderSettings(){
+for(const k of ["store_name","whatsapp","welcome","delivery_time","exchange_policy","site_credit","facebook","instagram","tiktok","snapchat","facebook_followers","instagram_followers","tiktok_followers","snapchat_followers","theme_wine","theme_gold","theme_cream","theme_dark","theme_columns","theme_radius"])
+if($("set_"+k))$("set_"+k).value=val(k);
+if($("set_theme_columns")&&!val("theme_columns"))$("set_theme_columns").value="4";
+if($("set_theme_radius")&&!val("theme_radius"))$("set_theme_radius").value="18";
+}
 async function saveKeys(keys){for(const k of keys){let el=$("set_"+k);if(!el)continue;let v=el.value; if(k.endsWith("_followers"))v=Number(v||0);const {error}=await sb.from("store_settings").upsert({key:k,value:v,updated_at:new Date().toISOString()},{onConflict:"key"});if(error)throw error}}
 $("saveSettings").onclick=async()=>{try{await saveKeys(["store_name","whatsapp","welcome","delivery_time","exchange_policy","site_credit"]);await loadSettings();renderSettings();toast("تم حفظ إعدادات المتجر")}catch(e){alert(e.message)}}
 $("saveSocial").onclick=async()=>{try{await saveKeys(["facebook","instagram","tiktok","snapchat","facebook_followers","instagram_followers","tiktok_followers","snapchat_followers"]);await loadSettings();renderSettings();toast("تم حفظ بيانات التواصل")}catch(e){alert(e.message)}}
+$("saveTheme").onclick=async()=>{
+try{
+const keys=["theme_wine","theme_gold","theme_cream","theme_dark","theme_columns","theme_radius"];
+await saveKeys(keys);
+await loadSettings();
+renderSettings();
+toast("تم حفظ مظهر الموقع");
+}catch(e){alert(e.message)}
+}
 
 function renderAreas(){$("areaBody").innerHTML=areas.map(a=>`<tr><td>${esc(a.area_name)}</td><td>₪${esc(a.price)}</td><td>${a.active?"مفعّلة":"مخفية"}</td><td><button class="btn small" onclick="editArea('${a.id}')">تعديل</button> <button class="btn small danger" onclick="deleteArea('${a.id}')">حذف</button></td></tr>`).join("")||"<tr><td colspan=4>لا توجد مناطق.</td></tr>"}
 $("addArea").onclick=()=>editArea();
